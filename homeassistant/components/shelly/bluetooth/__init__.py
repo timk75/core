@@ -32,6 +32,8 @@ async def async_connect_scanner(
     """Connect scanner."""
     device = coordinator.device
     entry = coordinator.config_entry
+    # Options persist as plain strings, coerce so `is` checks work.
+    scanner_mode = BLEScannerMode(scanner_mode)
     requested_mode = BLE_SCANNER_MODE_TO_BLUETOOTH_SCANNING_MODE[scanner_mode]
     # AUTO runs the radio passive and lets habluetooth's auto-scheduler
     # flip the BLE script to active on demand.

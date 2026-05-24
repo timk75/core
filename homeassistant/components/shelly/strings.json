@@ -685,7 +685,7 @@
         },
         "step": {
           "confirm": {
-            "description": "Your Shelly device {device_name} with IP address {ip_address} is running firmware {firmware} and acts as BLE scanner with active mode. This firmware version is not supported for BLE scanner active mode.\n\nSelect **Submit** button to start the OTA update to the latest stable firmware version.",
+            "description": "Your Shelly device {device_name} with IP address {ip_address} is running firmware {firmware} and acts as BLE scanner with active or auto mode. This firmware version is not supported for these BLE scanner modes.\n\nSelect **Submit** button to start the OTA update to the latest stable firmware version.",
             "title": "[%key:component::shelly::issues::ble_scanner_firmware_unsupported::title%]"
           }
         }
