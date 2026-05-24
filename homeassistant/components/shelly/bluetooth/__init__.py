@@ -48,9 +48,7 @@ async def async_connect_scanner(
         current_mode=current_mode,
     )
     if scanner_mode is BLEScannerMode.AUTO:
-        scanner.set_active_window_provider(  # type: ignore[attr-defined]
-            device, BLE_SCAN_RESULT_EVENT, BLE_SCAN_RESULT_VERSION
-        )
+        scanner.set_active_window_provider(device)  # type: ignore[attr-defined]
     unload_callbacks = [
         async_register_scanner(
             hass,
