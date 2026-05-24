@@ -787,16 +787,17 @@
         "data_description": {
           "ble_scanner_mode": "The scanner mode to use for Bluetooth scanning."
         },
-        "description": "Bluetooth scanning can be active or passive. With active, the Shelly requests data from nearby devices; with passive, the Shelly receives unsolicited data from nearby devices."
+        "description": "Auto is recommended for most setups; the Shelly listens passively and only briefly switches to active when needed, saving battery on your Bluetooth devices."
       }
     }
   },
   "selector": {
     "ble_scanner_mode": {
       "options": {
-        "active": "[%key:common::state::active%]",
+        "active": "Active (uses more device battery, fastest updates)",
+        "auto": "Auto (recommended, saves device battery)",
         "disabled": "[%key:common::state::disabled%]",
-        "passive": "Passive"
+        "passive": "Passive (lowest device battery use, some details may be missing)"
       }
     },
     "device": {
